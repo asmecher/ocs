@@ -32,6 +32,12 @@ class Author extends PKPAuthor {
 	// Get/set methods
 	//
 
+	// FOR NLM PLUGIN COMPATIBILITY: Get the author's affiliation. (The NLM plugin expects
+	// affiliations to be localized; they aren't in this release.)
+	function getLocalizedAffiliation() {
+		return $this->getAffiliation();
+	}
+
 	/**
 	 * Get ID of paper.
 	 * @return int
